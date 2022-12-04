@@ -21,7 +21,7 @@ abstract class AbstractTask {
         $trixi->wrapGift(static::TASK_ID.' - '.$this->part, $gift);
     }
 
-    abstract protected function buildGift(array $components): string;
+    abstract protected function buildGift(array $components): int;
 }
 
 ?>

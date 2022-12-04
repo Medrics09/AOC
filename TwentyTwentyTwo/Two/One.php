@@ -9,7 +9,7 @@ use AOC\AbstractTask;
 class One extends AbstractTask {
     const TASK_ID = 'TwentyTwentyTwo/Two';
 
-    protected function buildGift(array $components): string
+    protected function buildGift(array $components): int
     {   
         $drawCombinations = [
             'A X', // rock
@@ -45,7 +45,7 @@ class One extends AbstractTask {
             };
         }
         
-        return (string) ($scissors * 3 + $paper * 2 + $rock + $wins * 6 + $draws * 3);
+        return $scissors * 3 + $paper * 2 + $rock + $wins * 6 + $draws * 3;
     }
 }
 

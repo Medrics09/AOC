@@ -9,7 +9,7 @@ use AOC\AbstractTask;
 class Two extends AbstractTask {
     const TASK_ID = 'TwentyTwentyTwo/One';
 
-    protected function buildGift(array $components): string
+    protected function buildGift(array $components): int
     {        
         foreach($components as $component) {
             $subResult = 0;
@@ -23,7 +23,7 @@ class Two extends AbstractTask {
 
         arsort($resultArray, SORT_NUMERIC);
 
-        return (string) (array_shift($resultArray) + array_shift($resultArray) + array_shift($resultArray));
+        return array_shift($resultArray) + array_shift($resultArray) + array_shift($resultArray);
     }
 }
 
