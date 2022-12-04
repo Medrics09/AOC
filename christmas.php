@@ -6,54 +6,37 @@ include 'TwentyTwentyTwo/Two/One.php';
 include 'TwentyTwentyTwo/Two/Two.php';
 include 'TwentyTwentyTwo/Three/One.php';
 include 'TwentyTwentyTwo/Three/Two.php';
-// include 'TwentyTwentyTwo/Four/One.php';
-// include 'TwentyTwentyTwo/Four/Two.php';
+include 'TwentyTwentyTwo/Four/One.php';
+include 'TwentyTwentyTwo/Four/Two.php';
 // include 'TwentyTwentyTwo/Five/One.php';
 // include 'TwentyTwentyTwo/Five/Two.php';
 
 use AOC\TwentyTwentyTwo\One;
 use AOC\TwentyTwentyTwo\Two;
 use AOC\TwentyTwentyTwo\Three;
-// use AOC\TwentyTwentyTwo\Four;
+use AOC\TwentyTwentyTwo\Four;
 // use AOC\TwentyTwentyTwo\Five;
 
-$tttOneOne = new One\One('One');
-$tttOneTwo = new One\Two('Two');
+if (isset($argv) === false || isset($argv[1]) === false) {
+    echo 'Please provide correct parameters: [door] [part] -> example: one one'.PHP_EOL;
 
-$tttTwoOne = new Two\One('One');
-$tttTwoTwo = new Two\Two('Two');
+    die();
+}
 
-$tttThreeOne = new Three\One('One');
-$tttThreeTwo = new Three\Two('Two');
+$door = ucfirst($argv[1]);
 
-// $tttFourOne = new Four\One('One');
-// $tttFourTwo = new Four\Two('Two');
+if (isset($argv[2]) === false) {
+    echo 'Please provide a correct part! example: one'.PHP_EOL;
 
-// $tttFiveOne = new Five\One('One');
-// $tttFiveTwo = new Five\Two('Two');
-echo '-----------------------  1   ---------------------------'. PHP_EOL;
+    die();
+}
 
-$tttOneOne->runTask();
-$tttOneTwo->runTask();
+$part = ucfirst($argv[2]);
+$className = 'AOC\TwentyTwentyTwo\\'.$door.'\\'.$part;
 
-echo '-----------------------  2   ---------------------------'. PHP_EOL;
+$ttt = new $className($part);
 
-$tttTwoOne->runTask();
-$tttTwoTwo->runTask();
-
-echo '-----------------------  3   ---------------------------'. PHP_EOL;
-
-$tttThreeOne->runTask();
-$tttThreeTwo->runTask();
-
-// echo '-----------------------  4   ---------------------------'. PHP_EOL;
-
-// $tttFourOne->runTask();
-// $tttFourTwo->runTask();
-
-// echo '-----------------------  5   ---------------------------'. PHP_EOL;
-
-// $tttFiveOne->runTask();
-// $tttFiveTwo->runTask();
+echo '----------------------------------- '.$door.' - '.$part.' -----------------------------------------'.PHP_EOL;
+$ttt->runTask();
 
 ?>
