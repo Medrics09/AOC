@@ -8,14 +8,14 @@ include 'TwentyTwentyTwo/Three/One.php';
 include 'TwentyTwentyTwo/Three/Two.php';
 include 'TwentyTwentyTwo/Four/One.php';
 include 'TwentyTwentyTwo/Four/Two.php';
-// include 'TwentyTwentyTwo/Five/One.php';
-// include 'TwentyTwentyTwo/Five/Two.php';
-
-use AOC\TwentyTwentyTwo\One;
-use AOC\TwentyTwentyTwo\Two;
-use AOC\TwentyTwentyTwo\Three;
-use AOC\TwentyTwentyTwo\Four;
-// use AOC\TwentyTwentyTwo\Five;
+include 'TwentyTwentyTwo/Five/One.php';
+include 'TwentyTwentyTwo/Five/Two.php';
+//include 'TwentyTwentyTwo/Six/One.php';
+//include 'TwentyTwentyTwo/Six/Two.php';
+//include 'TwentyTwentyTwo/Seven/One.php';
+//include 'TwentyTwentyTwo/Seven/Two.php';
+//include 'TwentyTwentyTwo/Eight/One.php';
+//include 'TwentyTwentyTwo/Eight/Two.php';
 
 if (isset($argv) === false || isset($argv[1]) === false) {
     echo 'Please provide correct parameters: [door] [part] -> example: one one'.PHP_EOL;
