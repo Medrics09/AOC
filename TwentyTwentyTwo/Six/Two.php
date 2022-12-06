@@ -11,7 +11,18 @@ class Two extends AbstractTask {
 
     protected function buildGift(array $components): string
     {
-        return 'TODO';
+        $dataChars = str_split($components[0][0]);
+
+        for ($index = 14; $index < count($dataChars); $index++) {
+            $dataStream = array_slice($dataChars, $index-14, 14);
+            $compare    = array_unique($dataStream);
+
+            if ($compare === $dataStream) {
+                break;
+            }
+        }
+
+        return $index;
     }
 }
 
