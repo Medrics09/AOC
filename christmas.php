@@ -32,9 +32,15 @@ if (isset($argv[2]) === false) {
 }
 
 $part = ucfirst($argv[2]);
+$testInput = false;
+
+if (isset($argv[3]) === true) {
+    $testInput = true;
+}
+
 $className = 'AOC\TwentyTwentyTwo\\'.$door.'\\'.$part;
 
-$ttt = new $className($part);
+$ttt = new $className($part, $testInput);
 
 echo '----------------------------------- '.$door.' - '.$part.' -----------------------------------------'.PHP_EOL;
 $ttt->runTask();

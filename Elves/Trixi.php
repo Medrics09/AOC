@@ -3,9 +3,11 @@
 namespace AOC\Elves;
 
 class Trixi {
-    public function assembleComponents(string $filePath): array 
+    public function assembleComponents(string $filePath, bool $testInput): array 
     {
-        $content = file_get_contents(__DIR__ . '/../' . $filePath . '/input.txt');
+        $inputFile = $testInput === true ? '/inputTest.txt' : '/input.txt';
+
+        $content = file_get_contents(__DIR__ . '/../' . $filePath . $inputFile);
         $array = explode(PHP_EOL, $content);
         $newKey = 0;
         $result = [];
