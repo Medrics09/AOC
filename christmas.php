@@ -16,6 +16,10 @@ include 'TwentyTwentyTwo/Seven/One.php';
 include 'TwentyTwentyTwo/Seven/Two.php';
 include 'TwentyTwentyTwo/Eight/One.php';
 include 'TwentyTwentyTwo/Eight/Two.php';
+include 'TwentyTwentyTwo/Nine/One.php';
+include 'TwentyTwentyTwo/Nine/Two.php';
+include 'TwentyTwentyTwo/Ten/One.php';
+include 'TwentyTwentyTwo/Ten/Two.php';
 
 if (isset($argv) === false || isset($argv[1]) === false) {
     echo 'Please provide correct parameters: [door] [part] -> example: one one'.PHP_EOL;
